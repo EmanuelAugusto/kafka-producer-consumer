@@ -1,0 +1,14 @@
+{
+  "name": "kafka",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "kafkajs": "^2.2.2",
+    "uuid": "^9.0.0"
+  }
+}
