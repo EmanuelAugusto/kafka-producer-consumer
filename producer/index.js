@@ -23,7 +23,8 @@ const produce = async () => {
           key: v4(),
           value: JSON.stringify({
             eventId: v4(),
-            userName: faker.name.fullName(),
+            name: faker.name.fullName(),
+            age: faker.datatype.number()
           }),
         },
       ],

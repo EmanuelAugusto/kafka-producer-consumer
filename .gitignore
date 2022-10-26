@@ -1,2 +1,4 @@
 consumer/node_modules
 producer/node_modules
+elastic-search/node_modules
+search/node_modules

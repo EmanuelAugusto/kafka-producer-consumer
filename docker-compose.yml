@@ -1,4 +1,5 @@
-version: "3"
+version: "3.7"
+
 services:
   zookeeper:
     image: "bitnami/zookeeper:latest"
@@ -42,3 +43,19 @@ services:
     volumes: 
       - ./consumer:/consumer
     command: /bin/sh -c "yarn && yarn start"
+  elastic_search:
+    image:  docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    container_name: elastic_search
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - KIBANA_PASSWORD=teste123
+      - ELASTIC_PASSWORD=teste123
+
+volumes:
+  es_data:
+    driver: local
